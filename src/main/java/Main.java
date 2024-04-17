@@ -1,14 +1,23 @@
-// import static org.junit.jupiter.api.Assertions.assertEquals;
-
-// import org.junit.jupiter.api.Test;
+import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
+    Scanner scanner = new Scanner(System.in);
 
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
+    // Wczytanie znaku
+    System.out.print("Podaj znak do narysowania trojkata: ");
+    char znak = scanner.next().charAt(0);
+
+    // Wczytanie rozmiaru trojkata
+    System.out.print("Podaj rozmiar trojkata: ");
+    int wiersz = scanner.nextInt();
+
+    // Rysowanie trojkata
+    for (int i = 1; i <= wiersz; i++) {
+      for (int j = 1; j <= i; j++) {
+        System.out.print(znak + " ");
+      }
+      System.out.println();
+    }
+  }
 }
